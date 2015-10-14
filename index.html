@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <title>Calculator</title>
+</head>
+<body>
+    <div id="calculator">
+      <h1>Simple Calculator!</h1>
+      <form method="get" name="calc">
+        <input type="Number" id="num1" align="left" onchange="getInput1()">
+        <input type="Number" id="num2" align="right" onchange="getInput2()">
+      </form>
+        <br>
+       <!-- <form method="post"> -->
+        <input type="button" class="keys" id="addition" value="+" onclick="updateResultDisplay('+')">
+        <input type="button" class="keys" id="subtraction" value="-" onclick="updateResultDisplay('-')">
+        <br>
+        <input type="button" class="keys" id="multiplication" value="*" onclick="updateResultDisplay('*')">
+        <input type="button" class="keys" id="division" value="/" onclick="updateResultDisplay('/')">
+        <br>
+        <input type="button" class="keys" id="modulo" value="%" onclick="updateResultDisplay('%')">
+        <input type="button" class="keys" id="power" value="^" onclick="updateResultDisplay('^')">
+        <br>
+        <input type="button" class="keys" id="clear" value="C" onclick="updateResultDisplay('C')">
+        <input type="button" class="keys" id="equal" value="Compute" onclick="compute()">
+        <br>
+          <!-- Display screen -->
+        <div id="resultDisplay" >
+              <div id="left"><h4 id="inputDisplay1"></h4></div>
+              <div id="center"><h4 id="operatorDisplay" ></h4></div>
+              <div id="right"><h4 id="inputDisplay2" ></h4></div>
+        </div>
+          <!-- Result display screen -->
+        <div id="finalResultDisplay" align="center"></div>
+        <!-- <input type="text" id="display" disabled> -->
+      <!-- </form> -->
+
+
+    </div>
+
+
+
+
+<script type="text/javascript" src="script/minicalc.js"></script>
+</body>
+</html>
